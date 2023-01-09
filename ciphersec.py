@@ -67,4 +67,4 @@ print(f'Retrieved password for {website}: {retrieved_password}')
 
 # Check the strength of the password
 password_strength = check_password_strength(password)
-print(f'Password strength: {password_strength
+print(f'Password strength: {password_strength}')
