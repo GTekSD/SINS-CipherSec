@@ -1,5 +1,5 @@
 # SINS-CipherSec
-a python script to help people secure their online accounts by generating strong, unique passwords and storing them in a secure manner and help people assess the strength of their passwords and generate new, stronger passwords if necessary. This could involve creating a simple password checker.
+A python script to help people secure their online accounts by generating strong, unique passwords and storing them in a secure manner and help people assess the strength of their passwords and generate new, stronger passwords if necessary. This could involve creating a simple password checker.
 
 # Manual
 - For the python script, which helps people secure their online accounts by generating strong, unique passwords and storing them in a secure manner:
