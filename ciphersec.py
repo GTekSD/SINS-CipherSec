@@ -1,70 +1,63 @@
-import string
-import random
-import base64
-from cryptography.fernet import Fernet
+"""length = lower = upper = digit = False
 
-# Generate a strong, unique password
-def generate_password(length=16):
-  # Use a combination of letters, numbers, and special characters
-  characters = string.ascii_letters + string.digits + string.punctuation
-  return ''.join(random.choice(characters) for i in range(length))
+password = input('Enter the password: ')
 
-# Encrypt a password using a key
-def encrypt_password(password, key):
-  fernet = Fernet(key)
-  encrypted_password = fernet.encrypt(password.encode())
-  return encrypted_password
+if len(password)>= 8:
+    length = True
+    
+    for letter in password:
+        if letter.islower():
+            lower = True
+        elif letter.isupper():
+            upper = True
+        elif letter.isdigit():
+            digit = True
 
-# Decrypt a password using a key
-def decrypt_password(encrypted_password, key):
-  fernet = Fernet(key)
-  decrypted_password = fernet.decrypt(encrypted_password).decode()
-  return decrypted_password
 
-# Store a password for a specific website
-def store_password(website, username, password, key):
-  encrypted_password = encrypt_password(password, key)
-  # Store the encrypted password in a file or a database
-  with open('passwords.txt', 'a') as f:
-    f.write(f'{website},{username},{encrypted_password}\n')
+if length and lower and upper and digit:
+    print('That is a valid password.')
+else:
+    print('That password is not valid.')
+"""
 
-# Retrieve a password for a specific website
-def retrieve_password(website, username, key):
-  # Read the password file or query the database
-  with open('passwords.txt', 'r') as f:
-    for line in f:
-      website_, username_, encrypted_password = line.strip().split(',')
-      if website == website_ and username == username_:
-        password = decrypt_password(encrypted_password, key)
-        return password
-  return None
+# Python program to check validation of password
+# Module of regular expression is used with search()
+import re
+import mmap
+password = input("Enter password:- ")
+flag = 0
+while True:
+	if (len(password)<=8):
+		flag = -1
+		break
+	elif not re.search("[a-z]", password):
+		flag = -1
+		break
+	elif not re.search("[A-Z]", password):
+		flag = -1
+		break
+	elif not re.search("[0-9]", password):
+		flag = -1
+		break
+	elif not re.search("[_@$]" , password):
+		flag = -1
+		break
+	elif re.search("\s" , password):
+		flag = -1
+		break
+	else:
+		flag = 0
+		print("Valid Password")
+		with open(r'/home/manoj/Desktop/rockyou.txt', 'rb', 0) as file:
+                     s = mmap.mmap(file.fileno(), 0, access=mmap.ACCESS_READ)
+                     if s.find(b'password') != -1:
+                        print('compromised')
+                  
+                     else:
+                        print('valid')
 
-# Check the strength of a password
-def check_password_strength(password):
-  # Check the length of the password
-  if len(password) < 8:
-    return 'Weak: Password is too short'
-  # Check if the password contains a combination of letters, numbers, and special characters
-  if not any(char.isdigit() for char in password) or not any(char.isalpha() for char in password) or not any(char in string.punctuation for char in password):
-    return 'Weak: Password is not complex enough'
-  return 'Strong: Password is strong'
+		break
 
-# Generate a key to encrypt and decrypt passwords
-key = base64.urlsafe_b64encode(Fernet.generate_key())
+if flag == -1:
+	print("secured  Password ")
 
-# Generate a new password for a website
-website = 'example.com'
-username = 'user'
-password = generate_password()
-print(f'New password for {website}: {password}')
-
-# Store the password
-store_password(website, username, password, key)
-
-# Retrieve the password
-retrieved_password = retrieve_password(website, username, key)
-print(f'Retrieved password for {website}: {retrieved_password}')
-
-# Check the strength of the password
-password_strength = check_password_strength(password)
-print(f'Password strength: {password_strength}')
