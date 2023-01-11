@@ -25,11 +25,35 @@ else:
 import re
 import mmap
 import pyfiglet
+import os
+import random
+import glob
 
+def main():
+    # Get the directory path of the main.py file
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # Join the directory name to form the relative path to the logo directory
+    directory = os.path.join(script_dir, 'logo')
+    # Get the list of all the .txt files in the logo directory
+    txt_files = glob.glob(os.path.join(directory, '*.txt'))
+    # Choose a random file from the list
+    chosen_file = random.choice(txt_files)
+    # Open the file
+    with open(chosen_file, 'r') as file:
+        # Read the contents of the file
+        contents = file.read()
+        # Print the contents of the file
+        print(contents)
+
+if __name__ == '__main__':
+    main()
+
+
+"""
 # import pyfiglet module
 result = pyfiglet.figlet_format("SINS CipherSec", font = "future"  )
 print(result)
-
+"""
 password = input("Enter password to check:- ")
 flag = 0
 
@@ -37,6 +61,7 @@ flag = 0
 while True:
 	if (len(password)<=8):
 		flag = -1
+		print('Weak Password, Password should be min 8 char long.')
 		break
 		
 	# Lowercase letters: a-z
