@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+
+# Python program to check validation of password
+# Module of regular expression is used with search()
+
 import re
 import mmap
 import pyfiglet
