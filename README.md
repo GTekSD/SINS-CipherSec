@@ -1,7 +1,16 @@
 <h1 align="center">
-  <img src="static/sins-main-logo.png" alt="CipherSec" width="200px">
+  <br>
+   <a href="https://github.com/GTekSD/SINS-CipherSec.git"><img src="static/sins-main-logo.png" alt="CipherSec" width="200px">
+  </br>
+</h1>
+
+
+<h1 align="center">
+  <br>
+  <a href="https://github.com/GTekSD/SINS-CipherSec.git"><img src="static/sins-main-logo.png" alt="SINS"></a>
   <br>
 </h1>
+
 
 # SINS-CipherSec
 A python script to help people secure their online accounts by generating strong, unique passwords and storing them in a secure manner and help people assess the strength of their passwords and generate new, stronger passwords if necessary. This could involve creating a simple password checker.
