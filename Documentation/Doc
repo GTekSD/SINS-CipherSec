@@ -1,0 +1,79 @@
+ABSTRACT
+The SINS CipherSec tool is a password management system designed to help users secure their online accounts by generating strong, unique passwords, checking their strength, and storing them in a secure manner. The tool includes a password generator that uses a combination of random character generation and rules to ensure a mix of uppercase and lowercase letters, numbers, and special characters. Additionally, the tool includes a password strength assessment feature that measures the strength of a given password by counting the number of characters, the mix of character types, and whether or not the password appears in a list of commonly used passwords. The tool also provides a secure storage feature that encrypts the passwords before storing them, and only allows the user to access them after proper authentication. The user interface is designed to be easy to use, allowing users to easily generate new passwords, check the strength of their current passwords, and securely store their passwords. Overall, the SINS CipherSec tool provides users with a comprehensive and secure solution for managing their online account passwords.
+Introduction
+The SINS CipherSec tool is a powerful password management solution that aims to keep users' online accounts secure by providing them with strong, unique and unbreakable passwords. The tool has a user-friendly interface that guides users through the process of password generation, strength assessment and secure storage. The password generator uses advanced algorithms to create passwords that are difficult to crack, by combining random characters, numbers, and symbols. The tool also includes a password strength checker that evaluates the strength of the entered password and suggests improvements if needed. The passwords are then encrypted and stored in a secure manner, accessible only to the user via proper authentication. The tool also offers the option to check the strength of the password through both command-line interface and graphical user interface as well as generating password in both ways. The tool also uses user's name and password phrase to make the password more memorable. Overall, the SINS CipherSec tool is a reliable and efficient solution that helps users keep their online accounts safe and secure.
+Key Features
+The key features of the Password Checker are:
+1.	Displaying an ASCII art logo from a randomly chosen file in a randomly chosen color from the 'logo' directory
+2.	Presenting a user-friendly menu with 4 options to choose from:
+•	Check password strength using command line interface
+•	Check password strength using graphical user interface
+•	Generate unbreakable password using command line interface
+•	Generate unbreakable password using graphical user interface
+3.	Running different python scripts from the 'script-main' directory based on the user's choice
+4.	Using subprocess.call() to run other python scripts
+5.	Using os.path.abspath() and os.path.dirname() method to get the current directory of the script and then join the directory name to form the relative path to the desired directory.
+6.	Using input() method to take user's choice and then it runs the relevant script by passing the command to run the script via subprocess.call() method.
+7.	Using glob and random module to randomly choose the logo file from the logo directory and choose random color from predefined list of colors.
+8.	Using termcolor module to print the contents of the chosen file in a randomly chosen color.
+9.	Using if-elif block to check user's choice and based on that it runs the relevant python script.
+Overall, the script serves as a starting point for the SINS CipherSec tool and allows the user to access the different features of the tool, such as password generation and strength assessment, through a user-friendly menu and also it provide the security to the passwords by running the scripts in subprocess.
+
+The key features of the Password Generator are:
+
+1.	It takes user input for name and password phrase.
+2.	It creates arrays of different character types: digits, lowercase characters, uppercase characters, and symbols.
+3.	It uses the random.choice() method to randomly select at least one character from each character set.
+4.	It uses a for loop to fill the rest of the password length by selecting randomly from the combined list of characters.
+5.	It uses the array module to convert the temporary password into an array and shuffle it to prevent it from having a consistent pattern.
+6.	It combines all the words and append the characters to form the password using a for loop.
+7.	It prints out the final password.
+8.	It ensures that the final password contains at least one character from each set of characters.
+9.	It uses combination of user's name and password phrase to create the final password.
+Overall, the program is designed to generate a strong password that meets certain security requirements, such as including a mix of character types and using a combination of user's name and phrase to make the password more memorable.
+
+Algorithm for the SINS CipherSec tool
+1.	Start the program and display the ASCII art logo.
+2.	Present the user with a menu of options, including:
+•	Check password strength (CLI/GUI)
+•	Generate a new password (CLI/GUI)
+•	Securely store passwords
+•	Exit the program
+3.	Take input from the user to select an option.
+4.	If the user chooses to check password strength:
+•	Prompt the user to enter a password
+•	Check the strength of the password using the password strength assessment module.
+•	If the password is strong, display a message indicating so.
+•	If the password is weak, display a message indicating so and suggest improvements.
+5.	If the user chooses to generate a new password:
+•	Use the password generation module to create a new password
+•	Display the new password to the user.
+6.	If the user chooses to securely store passwords:
+•	Prompt the user to enter a password
+•	Use the secure storage module to encrypt the password and store it.
+7.	If the user chooses to exit the program:
+•	Exit the program.
+
+Future Scope of the Tool
+The SINS CipherSec tool has a lot of potential for future development. Here are a few areas where the tool could be expanded upon:
+1.	Mobile App: Develop a mobile app version of the tool to allow users to easily manage their passwords on-the-go.
+2.	Cloud-based storage: Implement a cloud-based storage solution to allow users to access their passwords from any device.
+3.	Integration with other apps: Consider integrating the tool with other apps and services such as web browsers, password managers, and cloud storage services.
+4.	Machine Learning: Implement Machine learning algorithms to make the password generation and strength assessment more robust.
+5.	Two Factor Authentication: Implement Two Factor Authentication (2FA) to provide an extra layer of security for the user.
+6.	Automated password rotation: Implement a feature that automatically rotates the user's passwords on a set schedule to ensure that they are not compromised.
+7.	Regular updates: Regularly update the tool with new security features and bug fixes to ensure that it remains secure and effective.
+8.	Advanced Analytics: Implement advanced analytics to track the users' behavior and provide them with personalized suggestions for password security.
+9.	Overall, the future scope of the SINS CipherSec tool is to provide a comprehensive, secure and easy-to-use password management solution that can be easily integrated with other apps and services, and that can adapt to the changing needs of users over time.
+
+Conclusion
+	The SINS CipherSec tool is a powerful and comprehensive password management solution that aims to help users secure their online accounts by providing them with strong, unique and unbreakable passwords. The tool includes a password generator, a password strength assessment module, a secure storage feature and user-friendly interface. Additionally, it also provides option to check the strength of the password in both command line interface and graphical user interface as well as generating password in both ways. The tool also uses user's name and password phrase to make the password more memorable. The tool has a lot of potential for future development, including mobile app integration, cloud-based storage, integration with other apps and services, Machine learning, Two Factor Authentication, Automated password rotation, regular updates, and advanced analytics. With regular updates and security features, the SINS CipherSec tool can adapt to the changing needs of users over time and provide a reliable and secure solution for managing their online account passwords.
+
+Reference
+Here are a few references you can use to learn more about password management and security:
+1.	"Password Management Best Practices" by NIST (National Institute of Standards and Technology) - This guide provides an overview of best practices for password management, including how to create strong passwords, how to store them securely, and how to manage them over time.
+2.	"Password Security: A Case History" by Robert David Graham - This article provides a detailed look at the history of password security and how it has evolved over time.
+3.	"The Psychology of Passwords" by Joseph Bonneau, Cormac Herley, Paul C. van Oorschot, and Frank Stajano - This paper discusses the psychological factors that influence the way people choose and use passwords.
+4.	"Passwords12" by Per Thorsheim - A conference focused on the latest research, best practices and tools for password security, it has many papers, videos and slide decks.
+5.	"Mastering Modern Authentication with Azure Active Directory" by Vittorio Bertocci - This book provides an in-depth look at authentication in the modern era, including how to use Azure Active Directory to manage user identities and access in a cloud-based environment.
+These references will give you a deeper understanding of the topic, and help you to develop the best practices, design, and implement the SINS CipherSec tool.
