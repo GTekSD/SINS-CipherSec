@@ -1,0 +1,8 @@
+--------------------------------------------
+PASSWORD CHECKER IN CLI MODE -  DESCRIPTION
+--------------------------------------------
+The code starts by importing the re module which is used for regular expressions.
+Next, we define a function check_password(password) which takes the password as an argument and performs various checks on it. The function checks if the password is at least 8 characters long, if it contains at least one numeric character, if it contains at least one special character and if it contains any consecutive repeating characters. If any of these checks fail, it returns an appropriate error message. If all checks pass, it returns "Password is valid."
+After defining the function, we use the built-in input() function to prompt the user to enter their password. The entered password is then passed as an argument to the check_password() function.
+The function returns the result of the validation check and it is stored in a variable named result.
+Finally, the print() function is used to print the result of the validation check to the console.
