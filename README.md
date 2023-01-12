@@ -1,13 +1,13 @@
 <h1 align="center">
   <br>
-   <a href="https://github.com/GTekSD/SINS-CipherSec.git"><img src="static/sins-main-logo.png" alt="CipherSec" width="200px">
+   <a href="https://github.com/GTekSD/SINS-CipherSec.git"><img src="static/sins-main-logo.png" alt="CipherSec" width="500px">
   </br>
 </h1>
 
 
 <h1 align="center">
   <br>
-  <a href="https://github.com/GTekSD/SINS-CipherSec.git"><img src="static/sins-main-logo.png" alt="SINS"></a>
+  <a href="https://github.com/GTekSD/SINS-CipherSec.git"><img src="static/sins-main2-logo.jpg" alt="SINS"></a>
   <br>
 </h1>
 
