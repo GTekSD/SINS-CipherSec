@@ -21,13 +21,13 @@ def generate_password():
         j += 1
     # Print the generated password
     print(password)
-    return password
+    return password,name
 
-def save_password(password):
+def save_password(password,name):
     # Get the current date
     date = datetime.now().strftime("%Y-%m-%d")
     # Create the user directory with the name entered by the user
-    user_directory = "users/" + name_entry.get()
+    user_directory = "users/" + name
     # Check if the directory already exists
     if not os.path.exists(user_directory):
         os.mkdir(user_directory)
@@ -41,52 +41,6 @@ def save_password(password):
     # Show a message with the location of the saved password
     print("Password saved to "+user_directory+"/password_" + date + ".txt")
 
-password = generate_password()
-save_password(password)
+password,name = generate_password()
+save_password(password,name)
 
-
-"""
-
-import sys #importing sys module to exit the program
-import getpass #importing getpass module to hide the entered passphrase
-import pyperclip # importing pyperclip module to copy the password to clipboard
-
-def generate_password():
-    #prompting user for name
-    name = input("Enter Your Name:")
-    #prompting user for passphrase and hiding it
-    passphrase = getpass.getpass("Enter Your Passphrase:")
-    password = ""
-    j = 0
-    for i in range(len(passphrase)):
-        char = passphrase[i]
-        #looping the name if passphrase is longer
-        if j == len(name):
-            j = 0
-        #generating password by adding ascii value of name and passphrase
-        x = (ord(char) + ord(name[j])) % 26
-        x += ord('A')
-        password += chr(x)
-        j += 1
-    #printing the generated password
-    print("Generated Password:", password)
-    #prompting user to save the password
-    save = input("Do you want to save the password in password.txt file? (y/n)")
-    if save.lower() == 'y':
-        try:
-            with open("password.txt", "w") as f:
-                f.write(password)
-            print("Password saved to password.txt.")
-        except:
-            print("Error occured while saving password")
-    #prompting user to copy the password to clipboard
-    copy = input("Do you want to copy the password to clipboard? (y/n)")
-    if copy.lower() == 'y':
-        pyperclip.copy(password)
-        print("Password copied to clipboard.")
-    else:
-        sys.exit()
-
-# calling the function to execute the code
-generate_password()
-"""
