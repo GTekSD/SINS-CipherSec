@@ -29,8 +29,8 @@ A python script to help people secure their online accounts by generating strong
 
 # To run your script by typing just the script name, you need to make it executable and also need to specify the interpreter to use using shabang line.
 
-- Add the shebang line at the top of your main.py file: #!/usr/bin/env python.
-- Make the script executable by running the following command chmod +x main.py
+- Add the shebang line at the top of your ciphersec.py file: #!/usr/bin/env python.
+- Make the script executable by running the following command chmod +x ciphersec.py
 - Add the path of your script to the system's PATH environment variable.
 - Now you should be able to run your script by typing just the script name in terminal.
 
@@ -38,7 +38,7 @@ There are several ways to add a directory to the system's PATH environment varia
 
 - You can add the directory to the PATH in the shell startup file, such as .bashrc or .bash_profile for bash shell, or .zshrc for zsh shell. You can open the file in a text editor and add the line export PATH=$PATH:/path/to/directory (replace /path/to/directory with the actual path to the directory containing your script)
 
-- You can also add the path of your script in the terminal, by running the command export PATH=$PATH:/path/to/directory (replace /path/to/directory with the actual path to the directory containing your script)
+- You can also add the path of your script in the terminal, by running the command export PATH=$PATH:/path/to/SINS-CipherSec (replace /path/to/SINS-CipherSec with the actual path to the directory containing your script)
 
 - If you want to add the path permanently, you can also add the path to the /etc/environment file. This will make the path available to all users and will persist after reboot.
 
