@@ -9,6 +9,7 @@ import pyfiglet
 import os
 import random
 import glob
+from termcolor import colored
 
 def main():
     # Get the directory path of the main.py file
@@ -23,8 +24,12 @@ def main():
     with open(chosen_file, 'r') as file:
         # Read the contents of the file
         contents = file.read()
-        # Print the contents of the file
-        print(contents)
+        # Define a list of colors
+        colors = ['red', 'green', 'yellow', 'blue', 'magenta', 'cyan']
+        # Choose a random color
+        color = random.choice(colors)
+        # Print the contents of the file in the chosen color
+        print(colored(contents, color))
 
 if __name__ == '__main__':
     main()
