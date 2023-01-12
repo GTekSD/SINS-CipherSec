@@ -1,4 +1,5 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import os
 import random
@@ -31,15 +32,15 @@ def main():
     # Get the directory path of the main.py file
     script_dir = os.path.dirname(os.path.abspath(__file__))
     # Join the directory name to form the relative path to the desired directory
-    directory = os.path.join(script_dir, 'features')
+    directory = os.path.join(script_dir, 'script-main')
     print("What do you want to do next?")
     print("1. Checker")
     print("2. Generator")
     choice = input("Enter your choice(1/2): ")
     if choice == "1":
-        subprocess.call(["python", os.path.join(directory, "checker.py")])
+        subprocess.call(["python", os.path.join(directory, "pass-checker-CLI.py")])
     elif choice == "2":
-        subprocess.call(["python", os.path.join(directory, "generator.py")])
+        subprocess.call(["python", os.path.join(directory, "pass-gen-CLI.py")])
     else:
         print("Invalid choice")
 
