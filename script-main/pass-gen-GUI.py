@@ -3,6 +3,7 @@
 import os
 import tkinter as tk
 from tkinter import messagebox
+from datetime import datetime
 
 def generate_password():
     name = name_entry.get()
@@ -23,10 +24,16 @@ def save_password():
     password = password_label.cget("text")
     if not os.path.exists("users"):
         os.mkdir("users")
-    file = open("users/password.txt", "w")
+    # Save the old password as old_password_<current_date>.txt
+    date = datetime.now().strftime("%Y-%m-%d")
+    old_password_file = open("users/old_password_" + date + ".txt", "w")
+    old_password_file.write(password_label.cget("text"))
+    old_password_file.close()
+    # Save the new password as password_<current_date>.txt
+    file = open("users/password_" + date + ".txt", "w")
     file.write(password)
     file.close()
-    messagebox.showinfo("Success", "Password saved to users/password.txt.")
+    messagebox.showinfo("Success", "Password saved to users/password_" + date + ".txt")
 
 def copy_password():
     password = password_label.cget("text")
@@ -63,3 +70,8 @@ copy_button = tk.Button(root, text="Copy Password", command=copy_password)
 copy_button.pack()
 
 root.mainloop()
+
+"""
+suppose im user1, i entered my name as user1 and i generated a password, so it will save in users directory but it should create a new directory which is user enter his name while generating password, and then in that newly created directory it will save password with current day.
+suppose on next day, same user again generated password, then it should save in that directory where previous password contain, but not this time it will rename that previous password file as old, and save new generated password with current date.
+"""
