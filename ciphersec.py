@@ -34,8 +34,8 @@ def main():
     # Join the directory name to form the relative path to the desired directory
     directory = os.path.join(script_dir, 'script-main')
     print("What do you want to do next?")
-    print("1. Checker")
-    print("2. Generator")
+    print("1. Check ur Passw0rd! strength")
+    print("2. Generate the unbreakable Passw0rd!")
     choice = input("Enter your choice(1/2): ")
     if choice == "1":
         subprocess.call(["python", os.path.join(directory, "pass-checker-CLI.py")])
