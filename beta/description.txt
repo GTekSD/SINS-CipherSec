@@ -1,0 +1,15 @@
+The code starts by importing the sys and getpass modules. The sys module is used to exit the program and the getpass module is used to hide the entered passphrase while typing.
+
+The generate_password() function is defined. It first prompts the user for their name and passphrase using the input() and getpass.getpass() functions, respectively.
+
+The function then generates the password by iterating through the characters of the passphrase and adding the ASCII value of the corresponding character in the name to it.
+
+The generated password is then printed to the command line using the print() function.
+
+Then, the function prompts the user to save the password to a file called "password.txt" using the input() function, if the user inputs 'y' the password is saved to the file, if not it continues to the next step.
+
+The function then prompts the user to copy the password to the clipboard using the input() function, if the user inputs 'y' the password is copied to the clipboard, if not the program exits.
+
+The function is called to execute the code.
+
+The pyperclip library is used to copy the password to clipboard.
