@@ -26,3 +26,20 @@ A python script to help people secure their online accounts by generating strong
 - The script generates a key to encrypt and decrypt passwords using the Fernet.generate_key function. It then uses this key to store and retrieve passwords for a specific website.
 
 - You can use the script by calling the relevant functions and passing the necessary arguments. For example, to generate and store a new password for a website, you can call generate_password, store_password, and retrieve_password with the appropriate arguments.
+
+# To run your script by typing just the script name, you need to make it executable and also need to specify the interpreter to use using shabang line.
+
+- Add the shebang line at the top of your main.py file: #!/usr/bin/env python.
+- Make the script executable by running the following command chmod +x main.py
+- Add the path of your script to the system's PATH environment variable.
+- Now you should be able to run your script by typing just the script name in terminal.
+
+There are several ways to add a directory to the system's PATH environment variable. Here are a few common methods:
+
+- You can add the directory to the PATH in the shell startup file, such as .bashrc or .bash_profile for bash shell, or .zshrc for zsh shell. You can open the file in a text editor and add the line export PATH=$PATH:/path/to/directory (replace /path/to/directory with the actual path to the directory containing your script)
+
+- You can also add the path of your script in the terminal, by running the command export PATH=$PATH:/path/to/directory (replace /path/to/directory with the actual path to the directory containing your script)
+
+- If you want to add the path permanently, you can also add the path to the /etc/environment file. This will make the path available to all users and will persist after reboot.
+
+Please note that the method to add path may vary depending on the Operating system you are using.
