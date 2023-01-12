@@ -4,10 +4,6 @@ import array
 mName = input("Enter your name ")
 mPhrase = input("Enter password the password phrase ")
 
-# maximum length of password needed
-# this can be changed to suit your password length
-CHAR_LENGTH = 4
-
 # declare arrays of the character that we need in out password
 # Represented as chars to enable easy string concatenation
 DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
@@ -40,7 +36,7 @@ temp_pass = rand_digit + rand_upper + rand_lower + rand_symbol
 # set of characters, we fill the rest of
 # the password length by selecting randomly from the combined
 # list of character above.
-for x in range(3):
+for x in range(10):
     temp_pass = temp_pass + random.choice(COMBINED_LIST)
 
     # convert temporary password into array and shuffle to
@@ -56,7 +52,7 @@ for x in temp_pass_list:
     password = password + x
 
 # Combine All the words
-password = password[0:2] + mName + password[3:5] + mPhrase
+password = password[0:5] + mName + password[6:11] + mPhrase
 
 # print out password
 print(password)
