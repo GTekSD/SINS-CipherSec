@@ -1,3 +1,6 @@
+# Script for generating password GUI mode
+
+import os
 import tkinter as tk
 from tkinter import messagebox
 
@@ -18,10 +21,12 @@ def generate_password():
     
 def save_password():
     password = password_label.cget("text")
-    file = open("password.txt", "w")
+    if not os.path.exists("users"):
+        os.mkdir("users")
+    file = open("users/password.txt", "w")
     file.write(password)
     file.close()
-    messagebox.showinfo("Success", "Password saved to password.txt.")
+    messagebox.showinfo("Success", "Password saved to users/password.txt.")
 
 def copy_password():
     password = password_label.cget("text")
