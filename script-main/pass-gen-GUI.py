@@ -49,34 +49,42 @@ def copy_password():
     root.clipboard_clear()
     # Append the password to the clipboard
     root.clipboard_append(password)
-    
+    # Show a message box with a success message
     messagebox.showinfo("Success", "Password copied to clipboard.")
 
 root = tk.Tk()
 root.geometry("200x200")
 root.title("Password Generator")
 
+# Create a label widget to display the instruction for entering the name
 name_label = tk.Label(root, text="Enter Your Name:")
 name_label.pack()
 
+# Create an entry widget for the user to enter their name
 name_entry = tk.Entry(root)
 name_entry.pack()
 
+# Create a label widget to display the instruction for entering the passphrase
 passphrase_label = tk.Label(root, text="Enter Your Passphrase:")
 passphrase_label.pack()
 
+# Create an entry widget for the user to enter their passphrase
 passphrase_entry = tk.Entry(root)
 passphrase_entry.pack()
 
+# Create a button widget to generate the password
 generate_button = tk.Button(root, text="Generate Password", command=generate_password)
 generate_button.pack()
 
+# Create a label widget to display the generated password
 password_label = tk.Label(root)
 password_label.pack()
 
+# Create a button widget to save the password
 save_button = tk.Button(root, text="Save Password", command=save_password)
 save_button.pack()
 
+# Create a button widget to copy the password to clipboard
 copy_button = tk.Button(root, text="Copy Password", command=copy_password)
 copy_button.pack()
 
