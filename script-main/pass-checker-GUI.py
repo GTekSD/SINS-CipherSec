@@ -1,4 +1,4 @@
-# script for password checker
+# script for password checker GUI mode
 
 import tkinter as tk
 from tkinter import messagebox
