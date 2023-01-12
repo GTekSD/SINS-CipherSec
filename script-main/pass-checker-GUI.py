@@ -1,8 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
 import re
+import os
 
-# function to check the password
 def check_password(password):
     # check if the password is at least 8 characters long
     if len(password) < 8:
@@ -16,12 +16,17 @@ def check_password(password):
     # check if the password contains any consecutive repeating characters
     elif re.search(r"(\w)\1", password):
         return "Password cannot contain any consecutive repeating characters."
-    # check if the password is in the list of passwords
-    elif not any(password.startswith(line[0]) and password in line for line in open('passwords.txt').read().splitlines()):
-        return "Breached Password. The Password you entered is in the compromised database. Please use difficult another password"
+    # check if the password is in any of the .txt files in the directory
+    directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'db-SecLists')
+    for filename in os.listdir(directory):
+        if filename.endswith(".txt"):
+            with open(os.path.join(directory, filename)) as file:
+                if password in file.read():
+                    return "Breached Password. The Password you entered is in the compromised database. Please use difficult another password"
     # if the password pass all the above conditions, then return valid
     else:
         return "Secure password."
+
 
 def on_submit():
     password = entry.get()
