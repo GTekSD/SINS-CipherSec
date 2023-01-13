@@ -1,0 +1,10 @@
+# pip3 install -r requirements.txt
+
+termcolor==1.1.0
+os
+random
+glob
+subprocess
+tkinter==8.6
+re
+datetime
