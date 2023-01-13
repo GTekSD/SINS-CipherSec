@@ -32,6 +32,15 @@ The key features of the Password Generator are:
 9.	It uses combination of user's name and password phrase to create the final password.
 Overall, the program is designed to generate a strong password that meets certain security requirements, such as including a mix of character types and using a combination of user's name and phrase to make the password more memorable.
 
+Methodology
+•	Understand the problem: Gather information on the current state of password management and the problems users face when trying to create and manage strong, unique passwords.
+•	Research existing solutions: Review existing password management tools and technologies to understand their features and capabilities, and to identify any gaps or areas for improvement.
+•	Design the tool: Develop a detailed design for the tool, including the user interface, the algorithms for password generation and assessment, and the methods for secure storage.
+•	Implement the tool: Use a programming language such as Python, Java or C#, to implement the tool based on the design. Use libraries and frameworks that are appropriate for the problem domain such as PyPassLib, passlib, zxcvbn and more.
+•	Test the tool: Use a combination of manual and automated testing to ensure that the tool is functional, user-friendly, and secure.Evaluate the tool: Gather feedback from users and evaluate the tool's performance and effectiveness. Use metrics such as time taken to generate the password, password strength, ease of use and security of the tool.
+•	Improve the tool: Use the feedback and evaluation results to make improvements and bug fixes to the tool.
+•	Deploy and maintain the tool: Deploy the tool to a server or hosting service and provide maintenance and support to ensure that it continues to function effectively over time.
+
 Algorithm for the SINS CipherSec tool
 1.	Start the program and display the ASCII art logo.
 2.	Present the user with a menu of options, including:
