@@ -15,9 +15,39 @@
 
 A python script to help people secure their online accounts by generating strong, unique passwords and storing them in a secure manner and help people assess the strength of their passwords and generate new, stronger passwords if necessary. This could involve creating a simple password checker.
 
-*SINS-CipherSec** is being actively developed by [@GTekSD](https://twitter.com/GTekSD) [@Pathamadia](https://twitter.com/) [@SanoJ](https://twitter.com/) and [@K4D4F](https://twitter.com/)
+*SINS-CipherSec** is being actively developed by [@GTekSD](https://twitter.com/GTekSD) [@Pathamadai](https://twitter.com/) [@SanoJ](https://twitter.com/) and [@K4D4F](https://twitter.com/)
 
-# Installation
+Table of Contents
+------------
+* [Installation](#installation--usage)
+* [Options](#options)
+* [Configuration](#configuration)
+* [How to use](#how-to-use)
+  * [Simple usage](#simple-usage)
+  * [Pausing progress](#pausing-progress)
+  * [Recursion](#recursion)
+  * [Threads](#threads)
+  * [Prefixes / Suffixes](#prefixes--suffixes)
+  * [Blacklist](#blacklist)
+  * [Filters](#filters)
+  * [Raw request](#raw-request)
+  * [Wordlist formats](#wordlist-formats)
+  * [Exclude extensions](#exclude-extensions)
+  * [Scan sub-directories](#scan-sub-directories)
+  * [Proxies](#proxies)
+  * [Reports](#reports)
+  * [More example commands](#more-example-commands)
+* [Support Docker](#support-docker)
+  * [Install Docker Linux](#install-docker-linux)
+  * [Build Image dirsearch](#build-image-dirsearch)
+  * [Using dirsearch](#using-dirsearch)
+* [References](#references)
+* [Tips](#tips)
+* [Contribution](#contribution)
+* [License](#license)
+
+Installation & Usage
+------------
 
 **Requirement: python 3 or higher**
 
@@ -25,6 +55,9 @@ Choose one of these installation options:
 
 - Install with **git**: `git clone https://github.com/GTekSD/SINS-CipherSec.git`
 - Install **Requirements** `pip3 install -r requirements.txt`
+
+Configuration
+------------
 
 **To run your script by typing just the script name, you need to make it executable and also need to specify the interpreter to use using shabang line.**
 
@@ -74,3 +107,37 @@ Please note that the method to add path may vary depending on the Operating syst
 - You can use the script by calling the relevant functions and passing the necessary arguments. For example, to generate and store a new password for a website, you can call generate_password, store_password, and retrieve_password with the appropriate arguments.
 
 
+
+References
+---------------
+- [This guide provides an overview of best practices for password management, including how to create strong passwords, how to store them securely, and how to manage them over time]."Password Management Best Practices" by NIST 
+- [This article provides a detailed look at the history of password security and how it has evolved over time.]."Password Security: A Case History" by Robert David 
+
+Tips
+---------------
+- The server has requests limit? That's bad, but feel free to bypass it, by randomizing proxy with `--proxy-list`
+- Want to find out config files or backups? Try `--suffixes ~` and `--prefixes .`
+- Want to find only folders/directories? Why not combine `--remove-extensions` and `--suffixes /`!
+- The mix of `--cidr`, `-F`, `-q` and will reduce most of noises + false negatives when brute-forcing with a CIDR
+- Scan a list of URLs, but don't want to see a 429 flood? `--skip-on-status 429` will help you to skip a target whenever it returns 429
+- The server contains large files that slow down the scan? You *might* want to use `HEAD` HTTP method instead of `GET`
+- Brute-forcing CIDR is slow? Probably you forgot to reduce request timeout and request retries. Suggest: `--timeout 3 --retries 1`
+
+
+Contribution
+---------------
+We have been receiving a lot of helps from many people around the world to improve this tool. Thanks so much to everyone who have helped us so far!
+See the below list to know who they are.
+
+- [MKBHD](https://github.com/)
+- [Pathamadai(https://github.com/)
+- [SanoJl](https://twitter.com/)
+- [K4D4RF](https://twitter.com/ )
+
+#### Pull requests and feature requests are welcomed
+
+License
+---------------
+Copyright (C) SINS 
+
+License: GNU General Public License, version 2
