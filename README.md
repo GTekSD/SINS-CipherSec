@@ -1,4 +1,3 @@
-# <width="500px">
 
 <h1 align="center">
   <br>
