@@ -1,5 +1,3 @@
-# pip3 install -r requirements.txt
-
 termcolor==1.1.0
 os
 random
