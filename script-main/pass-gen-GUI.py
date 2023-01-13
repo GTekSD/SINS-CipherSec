@@ -53,7 +53,7 @@ def copy_password():
     messagebox.showinfo("Success", "Password copied to clipboard.")
 
 root = tk.Tk()
-root.geometry("200x200")
+root.geometry("300x400")
 root.title("Password Generator")
 
 # Create a label widget to display the instruction for entering the name
