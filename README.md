@@ -110,8 +110,11 @@ Please note that the method to add path may vary depending on the Operating syst
 
 References
 ---------------
-- [This guide provides an overview of best practices for password management, including how to create strong passwords, how to store them securely, and how to manage them over time]."Password Management Best Practices" by NIST 
-- [This article provides a detailed look at the history of password security and how it has evolved over time.]."Password Security: A Case History" by Robert David 
+- [Password Management Best Practices](https://www.a.in/) by NIST 
+- [Password Security: A Case History](https://www.a.in/) by Robert David Graham 
+- [The Psychology of Passwords](https://www.a.in/) by Joseph Bonneau, Cormac Herley, Paul C. van Oorschot, and Frank Stajano 
+- [Passwords12](https://www.a.in/) by Per Thorsheim 
+- [Mastering Modern Authentication with Azure Active Directory](https://www.a.in/) by Vittorio Bertocci  
 
 Tips
 ---------------
