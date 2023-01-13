@@ -21,6 +21,14 @@ def check_password(password):
     elif re.search(r"(\w)\1{2,}", password):
         return "Password can contain only 2 consecutive repeating characters."
     
+    # check if the password contains at least one capital letter
+    elif not any(i.isupper() for i in password):
+        return "Password must contain at least one capital letter."
+    
+    # check if the password contains at least one small letter
+    elif not any(i.islower() for i in password):
+        return "Password must contain at least one small letter."
+    
     # check if the password is in any of the .txt files in the directory
     directory = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'db-SecLists')
     for filename in os.listdir(directory):
