@@ -1,3 +1,4 @@
+# sctipt for password generator GUI mode
 
 import tkinter as tk
 from tkinter import messagebox
