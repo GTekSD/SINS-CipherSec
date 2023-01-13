@@ -33,6 +33,14 @@ There are several ways to add a directory to the system's PATH environment varia
 - You can also add the path of your script in the terminal, by running the command `export PATH=$PATH:/path/to/SINS-CipherSec` (replace /path/to/SINS-CipherSec with the actual path to the directory containing your script)
 
 - If you want to add the path permanently, you can also add the path to the /etc/environment file. This will make the path available to all users and will persist after reboot.
+- or hit cmd `source .zshrc` for kali linux
+- Manually add path in .zshrsc file
+Example: 
+```
+# SINS CipherSec
+alias ciphersec='python3 /home/kali/Tools/SINS-CipherSec/ciphersec.py'
+export PATH=$PATH:/home/kali/Tools/SINS-CipherSec
+```
 
 Please note that the method to add path may vary depending on the Operating system you are using.
 
