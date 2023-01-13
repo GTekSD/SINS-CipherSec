@@ -24,25 +24,7 @@ Table of Contents
 * [Configuration](#configuration)
 * [How to use](#how-to-use)
   * [Simple usage](#simple-usage)
-  * [Pausing progress](#pausing-progress)
-  * [Recursion](#recursion)
-  * [Threads](#threads)
-  * [Prefixes / Suffixes](#prefixes--suffixes)
-  * [Blacklist](#blacklist)
-  * [Filters](#filters)
-  * [Raw request](#raw-request)
-  * [Wordlist formats](#wordlist-formats)
-  * [Exclude extensions](#exclude-extensions)
-  * [Scan sub-directories](#scan-sub-directories)
-  * [Proxies](#proxies)
-  * [Reports](#reports)
-  * [More example commands](#more-example-commands)
-* [Support Docker](#support-docker)
-  * [Install Docker Linux](#install-docker-linux)
-  * [Build Image dirsearch](#build-image-dirsearch)
-  * [Using dirsearch](#using-dirsearch)
 * [References](#references)
-* [Tips](#tips)
 * [Contribution](#contribution)
 * [License](#license)
 
@@ -88,25 +70,10 @@ Please note that the method to add path may vary depending on the Operating syst
 # Manual
 - For the python script, which helps people secure their online accounts by generating strong, unique passwords and storing them in a secure manner:
 
-- Make sure you have the necessary libraries installed: string, random, base64, and cryptography. You can install these libraries using pip install.
-
-- The script has four main functions: generate_password, encrypt_password, decrypt_password, and store_password.
-
-- generate_password generates a strong, unique password of a specified length (16 characters by default). It uses a combination of letters, numbers, and special characters to create the password.
-
-- encrypt_password and decrypt_password use the Fernet module from the cryptography library to encrypt and decrypt passwords, respectively. They take a password and a key as arguments, and return the encrypted or decrypted password.
-
-- store_password stores a password for a specific website and username. It takes the website, username, password, and key as arguments, and stores the encrypted password in a file or a database.
-
-- retrieve_password retrieves a password for a specific website and username. It takes the website, username, and key as arguments, and returns the decrypted password.
-
+- The script has three main functions: validate_password, generate_password, and store_password.
+- generate_password generates a strong, unique password of a length of the password phrase. It uses a combination of letters, numbers, and special    characters to create the password.
+- store_password stores a password for a specific website inside the users directory in the script directory. 
 - check_password_strength checks the strength of a password. It returns a message indicating whether the password is strong or weak, and provides guidance on how to improve a weak password.
-
-- The script generates a key to encrypt and decrypt passwords using the Fernet.generate_key function. It then uses this key to store and retrieve passwords for a specific website.
-
-- You can use the script by calling the relevant functions and passing the necessary arguments. For example, to generate and store a new password for a website, you can call generate_password, store_password, and retrieve_password with the appropriate arguments.
-
-
 
 References
 ---------------
