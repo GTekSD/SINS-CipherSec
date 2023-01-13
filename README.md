@@ -19,7 +19,7 @@ Choose one of these installation options:
 - Install with **git**: `git clone https://github.com/GTekSD/SINS-CipherSec.git`
 - Install **Requirements** `pip3 install -r requirements.txt`
 
-** To run your script by typing just the script name, you need to make it executable and also need to specify the interpreter to use using shabang line.**
+**To run your script by typing just the script name, you need to make it executable and also need to specify the interpreter to use using shabang line.**
 
 - Add the shebang line at the top of your ciphersec.py file: `#!/usr/bin/env python`.
 - Make the script executable by running the following command `chmod +x ciphersec.py`
