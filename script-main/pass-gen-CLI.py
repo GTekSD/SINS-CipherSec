@@ -1,16 +1,14 @@
 # Script for generating password CLI mode
 
 import os
-from datetime import datetime
+import datetime
 
+# function to generate password
 def generate_password():
-    # Get the name and passphrase entered by the user
     name = input("Enter Your Name: ")
     passphrase = input("Enter Your Passphrase: ")
-
     password = ""
     j = 0
-    # Generate the password using the name and passphrase
     for i in range(len(passphrase)):
         char = passphrase[i]
         if j == len(name):
@@ -19,28 +17,35 @@ def generate_password():
         x += ord('A')
         password += chr(x)
         j += 1
-    # Print the generated password
-    print(password)
+    print("Generated Password: ", password)
     return password,name
 
+# function to save password
 def save_password(password,name):
-    # Get the current date
-    date = datetime.now().strftime("%Y-%m-%d")
-    # Create the user directory with the name entered by the user
+    #get the current date
+    now = datetime.datetime.now()
+    current_date = now.strftime("%Y-%m-%d")
+    # create the directory "users" if it does not exist
+    if not os.path.exists("users"):
+        os.makedirs("users")
+    # create a directory with the user's name if it does not exist
     user_directory = "users/" + name
-    # Check if the directory already exists
     if not os.path.exists(user_directory):
-        os.mkdir(user_directory)
-    else:
-        # Rename the previous password file as old_password_<current_date>.txt
-        os.rename(user_directory+"/password_"+date+".txt",user_directory+"/old_password_"+date+".txt")
-    # Save the new password in the user directory with the current date
-    file = open(user_directory+"/password_" + date + ".txt", "w")
+        os.makedirs(user_directory)
+    # rename the previous password file to "old.password" if it exists
+    if os.path.exists(user_directory+'/password.txt'):
+        os.rename(user_directory+'/password.txt', user_directory+'/old.password')
+    # save the new password to a file with the current date as the file name
+    file = open(user_directory + "/password"+current_date+".txt", "w")
     file.write(password)
     file.close()
-    # Show a message with the location of the saved password
-    print("Password saved to "+user_directory+"/password_" + date + ".txt")
+    print("Password saved to "+user_directory+"/password"+current_date+".txt.")
 
-password,name = generate_password()
-save_password(password,name)
+# main function to call other functions
+def main():
+    password,name = generate_password()
+    save_password(password,name)
 
+# call the main function
+if __name__ == '__main__':
+    main()
