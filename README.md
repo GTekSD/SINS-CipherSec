@@ -12,9 +12,10 @@
 ![License](https://img.shields.io/badge/license-GNU_General_Public_License-_red.svg)
 
 > "Advanced Password Management with SINS CipherSec: Securing Online Accounts with Unbreakable Passwords"
-> **SINS-CipherSec** is being actively developed by [@GTekSD](https://twitter.com/GTekSD) [@Pathamadia](https://twitter.com/) [@SanoJ](https://twitter.com/) and [@K4D4F](https://twitter.com/)
 
 A python script to help people secure their online accounts by generating strong, unique passwords and storing them in a secure manner and help people assess the strength of their passwords and generate new, stronger passwords if necessary. This could involve creating a simple password checker.
+
+*SINS-CipherSec** is being actively developed by [@GTekSD](https://twitter.com/GTekSD) [@Pathamadia](https://twitter.com/) [@SanoJ](https://twitter.com/) and [@K4D4F](https://twitter.com/)
 
 # Installation
 
