@@ -1,4 +1,4 @@
- width="500px">
+# <width="500px">
 
 <h1 align="center">
   <br>
@@ -8,6 +8,12 @@
 
 
 # SINS-CipherSec
+
+![Build](https://img.shields.io/badge/Built%20with-Python-Blue)
+![License](https://img.shields.io/badge/license-GNU_General_Public_License-_red.svg)
+
+> "Advanced Password Management with SINS CipherSec: Securing Online Accounts with Unbreakable Passwords"
+
 A python script to help people secure their online accounts by generating strong, unique passwords and storing them in a secure manner and help people assess the strength of their passwords and generate new, stronger passwords if necessary. This could involve creating a simple password checker.
 
 # Installation
