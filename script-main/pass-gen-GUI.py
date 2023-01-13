@@ -1,16 +1,14 @@
-import os
+
 import tkinter as tk
 from tkinter import messagebox
-from datetime import datetime
+import os
+import datetime
 
 def generate_password():
-    # Get the name and passphrase entered by the user
     name = name_entry.get()
     passphrase = passphrase_entry.get()
-
     password = ""
     j = 0
-    # Generate the password using the name and passphrase
     for i in range(len(passphrase)):
         char = passphrase[i]
         if j == len(name):
@@ -19,74 +17,64 @@ def generate_password():
         x += ord('A')
         password += chr(x)
         j += 1
-    # Update the password label with the generated password
     password_label.config(text=password)
-
+    
 def save_password():
-    # Get the generated password
     password = password_label.cget("text")
-    # Get the current date
-    date = datetime.now().strftime("%Y-%m-%d")
-    # Create the user directory with the name entered by the user
-    user_directory = "users/" + name_entry.get()
-    # Check if the directory already exists
+    name = name_entry.get()
+    # Create a directory named "users" if it doesn't exist
+    if not os.path.exists("users"):
+        os.mkdir("users")
+    # Create a subdirectory with the name entered by the user if it doesn't exist
+    user_directory = "users/" + name
     if not os.path.exists(user_directory):
         os.mkdir(user_directory)
-    else:
-        # Rename the previous password file as old_password_<current_date>.txt
-        os.rename(user_directory+"/password_"+date+".txt",user_directory+"/old_password_"+date+".txt")
-    # Save the new password in the user directory with the current date
-    file = open(user_directory+"/password_" + date + ".txt", "w")
+    # get the current date
+    now = datetime.datetime.now()
+    current_date = now.strftime("%Y-%m-%d")
+    # rename the old password file as old.password with date
+    for file in os.listdir(user_directory):
+        if file.endswith(".password"):
+            os.rename(user_directory + '/' + file, user_directory + '/old.' + file + '.' + current_date)
+    # save the new generated password with current date
+    file = open(user_directory + "/password." + current_date + ".password", "w")
     file.write(password)
     file.close()
-    # Show a message box with the location of the saved password
-    messagebox.showinfo("Success", "Password saved to "+user_directory+"/password_" + date + ".txt")
+    messagebox.showinfo("Success", "Password saved to " + user_directory + ".")
 
 def copy_password():
-    # Get the generated password
     password = password_label.cget("text")
-    # Clear the clipboard
     root.clipboard_clear()
-    # Append the password to the clipboard
     root.clipboard_append(password)
-    # Show a message box with a success message
     messagebox.showinfo("Success", "Password copied to clipboard.")
 
+
 root = tk.Tk()
-root.geometry("300x400")
+root.geometry("200x200")
 root.title("Password Generator")
 
-# Create a label widget to display the instruction for entering the name
 name_label = tk.Label(root, text="Enter Your Name:")
 name_label.pack()
 
-# Create an entry widget for the user to enter their name
 name_entry = tk.Entry(root)
 name_entry.pack()
 
-# Create a label widget to display the instruction for entering the passphrase
 passphrase_label = tk.Label(root, text="Enter Your Passphrase:")
 passphrase_label.pack()
 
-# Create an entry widget for the user to enter their passphrase
 passphrase_entry = tk.Entry(root)
 passphrase_entry.pack()
 
-# Create a button widget to generate the password
 generate_button = tk.Button(root, text="Generate Password", command=generate_password)
 generate_button.pack()
 
-# Create a label widget to display the generated password
 password_label = tk.Label(root)
 password_label.pack()
 
-# Create a button widget to save the password
 save_button = tk.Button(root, text="Save Password", command=save_password)
 save_button.pack()
 
-# Create a button widget to copy the password to clipboard
 copy_button = tk.Button(root, text="Copy Password", command=copy_password)
 copy_button.pack()
 
 root.mainloop()
-
