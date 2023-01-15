@@ -15,7 +15,7 @@
 
 A python script to help people secure their online accounts by generating strong, unique passwords and storing them in a secure manner and help people assess the strength of their passwords and generate new, stronger passwords if necessary. This could involve creating a simple password checker.
 
-*SINS-CipherSec** is being actively developed by [@GTekSD](https://twitter.com/GTekSD) [@Pathamadai](https://twitter.com/AbuAhmadFareez/) [@SanoJ](https://twitter.com/) and [@K4D46F](https://twitter.com/sabir_becker/)
+*SINS-CipherSec** is being actively developed by [@GTekSD](https://twitter.com/GTekSD) [@Pathamadai](https://twitter.com/AbuAhmadFareez/) [@SanoJ](https://twitter.com/) and [@Sabiro](https://twitter.com/sabir_becker/)
 
 Table of Contents
 ------------
