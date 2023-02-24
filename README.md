@@ -99,10 +99,11 @@ Contribution
 We have been receiving a lot of helps from many people around the world to improve this tool. Thanks so much to everyone who have helped us so far!
 See the below list to know who they are.
 
-- [MKBHD](https://github.com/)
-- [Pathamadai(https://github.com/)
-- [SanoJl](https://twitter.com/)
-- [K4D4RF](https://twitter.com/ )
+- [GTekSD](https://twitter.com/cr34t0r_Cyxac)
+- [Pathamadai](https://twitter.com/AbuAhmadFareez/)
+- [SanoJ](https://twitter.com/)
+- [Sabiro](https://twitter.com/sabir_becker/)
+
 
 #### Pull requests and feature requests are welcomed
 
