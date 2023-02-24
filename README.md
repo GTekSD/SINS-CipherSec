@@ -100,7 +100,7 @@ We have been receiving a lot of helps from many people around the world to impro
 See the below list to know who they are.
 
 - [GTekSD](https://twitter.com/cr34t0r_Cyxac)
-- [Pathamadai](https://twitter.com/AbuAhmadFareez/)
+- [Pathamadai](https://twitter.com/A_MdIbrahim)
 - [SanoJ](https://twitter.com/)
 - [Sabiro](https://twitter.com/sabir_becker/)
 
