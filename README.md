@@ -109,6 +109,6 @@ See the below list to know who they are.
 
 License
 ---------------
-Copyright (C) SINS 
+Copyright ©️ SINS
 
-License: GNU General Public License, version 2
+License: GNU General Public License v3.0
